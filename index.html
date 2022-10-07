@@ -8,11 +8,10 @@
 </head>
 <body>
     <div id="main">
-        <div id="screen">
-            <input type="text" name="0" id="result">
-        </div>
+        <section id="screen" style="max-width: 100px; color: aqua;border-color: brown; padding-bottom: 30px;">
+        </section>
         <div id="number">
-            <button>1</button>
+            <button id="num1" value="1">1</button>
             <button>2</button>
             <button>3</button><br>
             <button>4</button>
@@ -34,5 +33,15 @@
             <input type="reset" value="Clear">
         </div>
     </div>
+    <script>
+        var Fnum = document.getElementById("num1")
+        console.log(Fnum.value);
+        Fnum.addEventListener("click",function () { modifydata(Fnum.value) });
+        function modifydata(enter){
+            var Onum = document.getElementById("screen");
+            Onum.innerHTML= enter;
+            console.log(enter);
+        }
+    </script>
 </body>
 </html>
