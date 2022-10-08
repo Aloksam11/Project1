@@ -5,43 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="StyleSheet" href="./style.css">
 </head>
 <body>
-    <div id="main">
-        <section id="screen" style="max-width: 100px; color: aqua;border-color: brown; padding-bottom: 30px;">
-        </section>
-        <div id="number">
-            <button id="num1" value="1">1</button>
-            <button>2</button>
-            <button>3</button><br>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button><br>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>0</button>
-        </div>
-        <div id="operation">
-            <button>+</button>
-            <button>-</button>
-            <button>X</button>
-            <button>/</button>
-        </div>
-        <div id="output">
-            <button>=</button>
-            <input type="reset" value="Clear">
+    <div id="container">
+        <h1>CALCULATOR</h1>
+        <div>
+            <input type="text" name="screen" readonly>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><button>(</button></td>
+                        <td><button>)</button></td>
+                        <td><button>C</button></td>
+                        <td><button>%</button></td>
+                    </tr>
+                    <tr>
+                        <td><button>7</button></td>
+                        <td><button>8</button></td>
+                        <td><button>9</button></td>
+                        <td><button>X</button></td>
+                    </tr>
+                    <tr>
+                        <td><button>4</button></td>
+                        <td><button>5</button></td>
+                        <td><button>6</button></td>
+                        <td><button>-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button>1</button></td>
+                        <td><button>2</button></td>
+                        <td><button>3</button></td>
+                        <td><button>+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button>0</button></td>
+                        <td><button>.</button></td>
+                        <td><button>/</button></td>
+                        <td><button>=</button></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
-    <script>
-        var Fnum = document.getElementById("num1")
-        console.log(Fnum.value);
-        Fnum.addEventListener("click",function () { modifydata(Fnum.value) });
-        function modifydata(enter){
-            var Onum = document.getElementById("screen");
-            Onum.innerHTML= enter;
-            console.log(enter);
-        }
-    </script>
 </body>
 </html>
